@@ -1,0 +1,7 @@
+{
+  "name": "Luxury Fitzrovia Escape - W1T 3AE",
+  "description": "A high-end landing page for a premium Airbnb property in the heart of London, featuring local attractions and an AI concierge.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
