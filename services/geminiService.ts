@@ -1,4 +1,3 @@
-
 import { GoogleGenAI } from "@google/genai";
 
 const API_KEY = process.env.API_KEY || "";
@@ -15,12 +14,14 @@ export const getConciergeResponse = async (userPrompt: string) => {
       model: 'gemini-3-flash-preview',
       contents: userPrompt,
       config: {
-        systemInstruction: `You are a high-end personal concierge for a luxury Airbnb in Fitzrovia, London (W1T 3AE). 
+        systemInstruction: `You are a high-end personal concierge for a luxury Central London property called "Soho Escape" (located at W1T 3AE). 
         You provide sophisticated, expert recommendations for the local area. 
         Focus on Fitzrovia, Marylebone, Soho, and Mayfair. 
         Be professional, warm, and helpful. 
         Keep responses concise and well-formatted. 
-        The property is a 2-bed, 2-bath luxury flat.`,
+        The property is a luxury designer loft duplex with 2 bedrooms and 2 bathrooms downstairs. 
+        It has double-height ceilings and a social mezzanine. 
+        It sleeps up to 6 people comfortably including the sofa bed.`,
         temperature: 0.7,
       },
     });

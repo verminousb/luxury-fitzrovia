@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from 'react';
 import { getConciergeResponse } from '../services/geminiService';
 import { Message } from '../types';
@@ -6,7 +5,7 @@ import { Message } from '../types';
 const Concierge: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
-    { role: 'assistant', content: "Welcome to Fitzrovia! I'm your local concierge. How can I help make your London stay unforgettable today?" }
+    { role: 'assistant', content: "Welcome to Soho Escape! I'm your personal local concierge. How can I help make your Central London stay unforgettable today?" }
   ]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -40,8 +39,8 @@ const Concierge: React.FC = () => {
         <div className="bg-white w-80 md:w-96 h-[500px] rounded-2xl shadow-2xl flex flex-col border border-slate-200 overflow-hidden animate-in slide-in-from-bottom-4 duration-300">
           <div className="bg-slate-900 text-white p-4 flex justify-between items-center">
             <div>
-              <h4 className="font-semibold">Local Concierge</h4>
-              <p className="text-xs text-slate-300">Fitzrovia Specialist</p>
+              <h4 className="font-semibold">Soho Escape Concierge</h4>
+              <p className="text-xs text-slate-300">Central London Expert</p>
             </div>
             <button onClick={() => setIsOpen(false)} className="text-slate-300 hover:text-white transition-colors">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
@@ -91,7 +90,7 @@ const Concierge: React.FC = () => {
           className="bg-slate-900 text-white p-4 rounded-full shadow-lg hover:scale-110 transition-transform flex items-center space-x-2"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-          <span className="font-medium hidden md:inline">Local Concierge</span>
+          <span className="font-medium hidden md:inline">Ask Concierge</span>
         </button>
       )}
     </div>
